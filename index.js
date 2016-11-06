@@ -107,3 +107,74 @@
 // addDays(["monday", "tuesday",'saturday'],["1:10","2:30","5:20"])
 //
 // document.write(days)
+var array = [1,2,3,4]
+for (var i = 0; i < array.length; i++){
+  var current = array[i]
+  console.log(current);
+}
+
+var names = ["peter", "nani", "kubo", "yvetka", "ludo"]
+
+function getAllNames() {
+  for(var i = 0;i < names.length;i++){
+    var newNam = names[0] + " " + names[2]
+    document.write(newNam)
+    console.log(newNam)
+  }
+  for(var j = 0;j < names.length;j++){
+    var newFam = names[4] + " " + names[2]
+      document.write(newFam)
+      console.log(newFam)
+  }
+}
+function getFam(){
+  for(var j = 0;j < names.length;j++){
+    var newFam = names[j]
+      document.write(newFam)
+      console.log(newFam);
+  }
+}
+
+// getAllNames()
+// getFam()
+
+var arr1 = ['x','x','x','x']
+var arr2 = ['o','o','o','o']
+
+function fun(){
+  for (var i = 0;i<arr1.length;i++){
+    var newOne = arr1[i]
+      document.write(newOne)
+      console.log(newOne)
+      for (var j=0;j<arr2.length;j++){
+        var newTwo = arr2[i]
+          document.write(newTwo)
+          console.log(newTwo)
+   }
+   console.log('hello', newTwo)
+   console.log('from two', newOne)
+     document.write(newTwo)
+          document.write(newOne)
+    }
+}
+
+// fun()
+
+function forEach(array, action) {
+  for (var i = 0; i < array.length; i++)
+    action(array[i]);
+}
+
+forEach(["Peter", "Kona", "Granfalloon"], console.log);
+
+// var numbers = [1,2], sum = 0
+// forEach(numbers, function(number){
+//   sum += number
+// })
+document.write(sum);
+
+var names = ["Peter Kona", "Nani Kona"],sum = 0
+  forEach(names,function(number){
+    sum += number
+  })
+  document.write('<br/>' + sum);
