@@ -1,1 +1,1 @@
-function decimalToRomanSimple(r){if(r<=0||r>=4e3)return r;for(var e="",a=0;a<roman.length;a++)for(;r>=decimal[a];)r-=decimal[a],e+=roman[a];return e}var romanNumber=new Array;roman=["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];var decimal=new Array;decimal=[1e3,900,500,400,100,90,50,40,10,9,5,4,1],document.write(decimalToRomanSimple(33));
+function labelPrint(n,l){for(var t=String(n);t.lenght<3;)t+=t;console.log(t+" "+l)}document.write(labelPrint());

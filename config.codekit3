@@ -9,6 +9,45 @@
 	],
 "creatorBuild": "25444",
 "files": {
+	"\/.idea\/basicAlgorithm-Scripting.iml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.idea\/basicAlgorithm-Scripting.iml",
+		"oF": 0
+		},
+	"\/.idea\/misc.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.idea\/misc.xml",
+		"oF": 0
+		},
+	"\/.idea\/modules.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.idea\/modules.xml",
+		"oF": 0
+		},
+	"\/.idea\/vcs.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.idea\/vcs.xml",
+		"oF": 0
+		},
+	"\/.idea\/workspace.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.idea\/workspace.xml",
+		"oF": 0
+		},
+	"\/index-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/index-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
