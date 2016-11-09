@@ -194,41 +194,65 @@
 // waf.sound = "hello2"
 // mark.makeSound()
 
-function foo(err, done) {
-    if (err) {
-        return done(err);
+// function foo(err, done) {
+//     if (err) {
+//         return done(err);
+//     }
+//     done();
+// }
+//
+// function bar(err, send) {
+//     if (err) {
+//         return send.error(err);
+//     }
+//     send.success();
+// }
+//
+// var add = function(a, b) { return a + b; }
+// var anotherAdd = add;
+// anotherAdd(2, 2); // 4
+//
+// // can be returned
+// function addx(x) {
+//     return function(y) {
+//         return x + y;
+//     }
+// }
+// var add2 = addx(2);
+// add2(3); // 5
+// add2(4); // 6
+//
+// var add3 = addx(3);
+// add3(3);
+// add3(5);
+//
+// function applyf(f, x, y) {
+//     return f(x, y);
+// }
+//
+// applyf(function(a, b) { return a + b; }, 2, 2);
+// function cal(a,b,add){
+// return document.write(a+b)
+// }
+// function add(a,b,add){
+// return (a*b)
+// }
+// cal(2,2,4)
+
+unction mySandwich(param1, param2, callback) {
+    alert('Started eating my sandwich.\n\nIt has: ' + param1 + ', ' + param2);
+
+    $('#sandwich').animate({
+        opacity: 0
+    }, 5000, function() {
+        // Animation complete.
+    });
+
+    if (callback && typeof(callback) === "function") {
+        callback();
     }
-    done();
 }
 
-function bar(err, send) {
-    if (err) {
-        return send.error(err);
-    }
-    send.success();
-}
-
-var add = function(a, b) { return a + b; }
-var anotherAdd = add;
-anotherAdd(2, 2); // 4
-
-// can be returned
-function addx(x) {
-    return function(y) {
-        return x + y;
-    }
-}
-var add2 = addx(2);
-add2(3); // 5
-add2(4); // 6
-
-var add3 = addx(3);
-add3(3); // 6
-add3(5); // 8
-
-// can be passed
-function applyf(f, x, y) {
-    return f(x, y);
-}
-
-applyf(function(a, b) { return a + b; }, 2, 2); // 4
+mySandwich('Salad', 'cheese', function() { 
+    alert('Finished eating my sandwich.');
+});
