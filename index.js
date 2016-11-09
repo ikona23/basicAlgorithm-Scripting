@@ -230,5 +230,4 @@ add3(5); // 8
 function applyf(f, x, y) {
     return f(x, y);
 }
-
 applyf(function(a, b) { return a + b; }, 2, 2); // 4
