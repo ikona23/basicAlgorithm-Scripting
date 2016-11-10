@@ -231,20 +231,44 @@
 //     return f(x, y);
 // }
 // applyf(function(a, b) { return a + b; }, 2, 2); // 4
-function finder(records,clbk){
-  setTimeout(function(){
-    records.push(3,4)
-    clbk(records)
-  },1000)
-}
-function process(records,clbk){
-  setTimeout(function(){
-    records.push(5,6)
-    clbk(records)
-  },1000)
-}
-finder([1, 2], function(records) {
-    process(records, function(records) {
-             console.log(records);       
-    });
-});
+// function finder(records,clbk){
+//   setTimeout(function(){
+//     records.push(3,4)
+//     clbk(records)
+//   },1000)
+// }
+// function process(records,clbk){
+//   setTimeout(function(){
+//     records.push(5,6)
+//     clbk(records)
+//   },1000)
+// }
+// finder([1, 2], function(records) {
+//     process(records, function(records) {
+//              console.log(records);
+//     });
+// });
+// function onProcessorDone(records){
+//     alert(records);
+// }
+//
+// function onFinderDone(records) {
+//     processor(records, onProcessorDone);
+// }
+//
+// finder([1, 2], onFinderDone);
+
+var cars = [
+  {name: 'skoda', type:'hatchback'},
+  {name:'toyota', type:'sport'},
+  {name:'skoda', type:'sedan'},
+  {name:'chevrolet', type:'sedan'},
+  {name:'chevrolet', type:'sedan'},
+  {name:'toyota', type:'4x4'}
+]
+
+var skoda = cars.filter(function(car){
+  return car.type === 'sedan'
+})
+
+document.write(console.log(skoda));
