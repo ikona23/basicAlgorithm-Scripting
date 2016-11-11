@@ -267,8 +267,16 @@ var cars = [
   {name:'toyota', type:'4x4'}
 ]
 
-var skoda = cars.filter(function(car){
-  return car.type === 'sedan'
+
+var skoda = cars.map(function(car){
+  if (car.type === 'sedan')
+  return 'sedan'
+  else if (car.type === 'sport')
+  return 'Sports car'
+  else if (car.type === '4x4')
+  return 'Four wheel drive'
+  else if (car.type === 'sport' && car.name ==='skoda')
+  return 'Skoda - best choice'
 })
 
-document.write(console.log(skoda));
+document.write(skoda);
