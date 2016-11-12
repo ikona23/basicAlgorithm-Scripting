@@ -1,3 +1,17 @@
+var cars = [
+  {name: 'skoda', type:'hatchback'},
+  {name:'toyota', type:'sport'},
+  {name:'skoda', type:'sedan'},
+  {name:'chevrolet', type:'sedan'},
+  {name:'chevrolet', type:'sedan'},
+  {name:'toyota', type:'4x4'}
+]
+
+var hatchbacks = cars.map(function(car){
+  return car.type === 'hatchback'
+})
+document.write('this are hatchbacks' + hatchbacks)
+
 // function store (skates, coffee){
 //   var skateStrings = String(skates)
 //     while(skateStrings.length < 3)
@@ -258,25 +272,26 @@
 //
 // finder([1, 2], onFinderDone);
 
-var cars = [
-  {name: 'skoda', type:'hatchback'},
-  {name:'toyota', type:'sport'},
-  {name:'skoda', type:'sedan'},
-  {name:'chevrolet', type:'sedan'},
-  {name:'chevrolet', type:'sedan'},
-  {name:'toyota', type:'4x4'}
-]
-
-
-var skoda = cars.map(function(car){
-  if (car.type === 'sedan')
-  return 'sedan'
-  else if (car.type === 'sport')
-  return 'Sports car'
-  else if (car.type === '4x4')
-  return 'Four wheel drive'
-  else if (car.type === 'sport' && car.name ==='skoda')
-  return 'Skoda - best choice'
-})
-
-document.write(skoda);
+// var skoda = cars.map(function(car){
+//   if (car.type === 'sedan')
+//     document.write( 'sedan')
+//   else if (car.type === 'sport')
+//     document.write('Sports car')
+//   else if (car.type === '4x4')
+//     document.write('Four wheel drive')
+//   else if (car.type === 'sedan' || car.name ==='skoda')
+//     document.write('Skoda - best choice')
+// })
+//
+// document.write(skoda);
+//
+// function Person(saying){
+//   this.saying = saying
+// }
+//
+// Person.prototype.talk=function(){
+//   document.write('I say:', this.saying)
+// }
+//
+// var cheese = new Person ('semicollons')
+// cheese.talk()
