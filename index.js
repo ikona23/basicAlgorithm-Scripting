@@ -7,10 +7,31 @@ var cars = [
   {name:'toyota', type:'4x4'}
 ]
 
-var hatchbacks = cars.map(function(car){
-  return car.type === 'hatchback'
-})
-document.write('this are hatchbacks' + hatchbacks)
+// var hatchbacks = cars.map(function(car){
+//   return car.type === 'hatchback'
+// })
+var iSedan = function(car){
+  return car.type === 'sedan'
+}
+// document.write('<br/>' + 'this are hatchbacks' + iSedan)
+
+var carsList = cars.map((car) => car.name)
+document.write('Map all cars with map function: <br/>' + carsList)
+
+var mapTypes = cars.map((types) => types.type)
+document.write('Types of cars with map function: <br/>' + mapTypes)
+
+var typesOfCars = cars.map((x) => x.name)
+
+document.write('<br/> Types fo cars ES6' + typesOfCars)
+
+var namesCars = []
+for (var i = 0; i < cars.length; i++){
+  namesCars.push(cars[i].name)
+}
+
+document.write('<br/> Types of namesCars' + namesCars)
+var sport = cars.filter(iSedan)
 
 // function store (skates, coffee){
 //   var skateStrings = String(skates)
