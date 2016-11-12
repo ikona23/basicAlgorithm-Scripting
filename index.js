@@ -7,6 +7,29 @@ var cars = [
   {name:'toyota', type:'4x4'}
 ]
 
+var orders = [
+  {amount: 200},
+  {amount: 200},
+  {amount: 440},
+  {amount: 6640},
+  {amount: 3220},
+  {amount: 300},
+  {amount: 5400},
+  {amount: 5500},
+  {amount: 4300},
+]
+
+// var ordersMap = orders.map((x) => document.write(x.amount + '<br/>'))
+var filterOrder = orders.map((x) => document.write('<br/>' + 'Amount is: ' + '$' + x.amount))
+
+var totalAmount = orders.reduce(sum, order) => document.write('<br/>'+ 'investigated' +sum + order.amount, 0))
+
+var totalAmount = 0
+for (var i = 0; i < orders.length; i++){
+  totalAmount += orders[i].amount
+}
+
+
 // var hatchbacks = cars.map(function(car){
 //   return car.type === 'hatchback'
 // })
@@ -16,10 +39,10 @@ var iSedan = function(car){
 // document.write('<br/>' + 'this are hatchbacks' + iSedan)
 
 var carsList = cars.map((car) => car.name)
-document.write('Map all cars with map function: <br/>' + carsList)
+document.write('<br/>' + 'Map all cars with map function: <br/>' + carsList)
 
 var mapTypes = cars.map((types) => types.type)
-document.write('Types of cars with map function: <br/>' + mapTypes)
+document.write('Types of cars with map function: <br/>' + mapTypes.join('<br/>'))
 
 var typesOfCars = cars.map((x) => x.name)
 
@@ -32,6 +55,19 @@ for (var i = 0; i < cars.length; i++){
 
 document.write('<br/> Types of namesCars' + namesCars)
 var sport = cars.filter(iSedan)
+
+var testMe = cars.map((x)=>x.type)
+
+console.log('test me' + testMe);
+
+var listNames = cars.map((x) => x.name)
+
+console.log('List names' + listNames.join('<br/>'));
+
+var zeroOne = cars.map((y)=>y.type)
+
+console.log('This is 3 :' + zeroOne.join());
+document.write('This is zero One' + zeroOne.join('<br/>'))
 
 // function store (skates, coffee){
 //   var skateStrings = String(skates)
