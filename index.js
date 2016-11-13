@@ -38,6 +38,12 @@ var orders = [
 ]
 
 
+var filterMe = orders.filter(function(x){
+  return x.orders
+})
+document.write(filterMe);
+
+
 
 var filterType = cars.filter(function(hatch){
   return hatch.type === 'hatchback'
