@@ -8,6 +8,37 @@ var cars = [
   {name:'toyota', type:'4x4'}
 ]
 
+var orders = [
+  {amount: 200},
+  {amount: 200},
+  {amount: 440},
+  {amount: 6640},
+  {amount: 3220},
+  {amount: 300},
+  {amount: 5400},
+  {amount: 5500},
+  {amount: 6640},
+  {amount: 3220},
+  {amount: 300},
+  {amount: 5400},
+  {amount: 5500},
+  {amount: 6640},
+  {amount: 3220},
+  {amount: 300},
+  {amount: 5400},
+  {amount: 5500},
+  {amount: 6640},
+  {amount: 5400},
+  {amount: 5500},
+  {amount: 6640},
+  {amount: 3220},
+  {amount: 300},
+  {amount: 5400},
+  {amount: 5500}
+]
+
+
+
 var filterType = cars.filter(function(hatch){
   return hatch.type === 'hatchback'
 })
@@ -30,7 +61,7 @@ console.log('find', find);
 //     if(cars[kubo].name === 'skoda')
 //     skoda.push(cars[kubo])
 // console.log('this is skoda', skoda);
-
+//
 // var sedan = []
 //   for (var i = 0;i<cars.length;i++)
 //     if(cars[i].type === 'sedan')
@@ -78,10 +109,6 @@ console.log('find', find);
 //     })
 //
 //     console.log('filter sedan', filterSedan[0]);
-//
-//
-//
-//
 // var skodaName = []
 // for (var i = 0; i < cars.length; i++)
 //   if(cars[i].name === 'skoda')
@@ -89,70 +116,128 @@ console.log('find', find);
 //
 //    console.log('this is skoda name', skodaName[0]);
 
-var orders = [
-  {amount: 200},
-  {amount: 200},
-  {amount: 440},
-  {amount: 6640},
-  {amount: 3220},
-  {amount: 300},
-  {amount: 5400},
-  {amount: 5500},
-  {amount: 4300},
-]
-
-var loopMap = orders.map((x) => x.amount)
-
-// var ordersMap = orders.map((x) => document.write(x.amount + '<br/>'))
-var filterOrder = orders.map((x) => document.write('<br/>' + 'Amount is: ' + '$' + x.amount))
-
-var totalAmount = orders.reduce((sum, order) => document.write('<br/>'+ 'investigated' +sum + order.amount, 0))
-
-var totalAmount = 0
-for (var i = 0; i < orders.length; i++){
-  totalAmount += orders[i].amount
+var naniCalc = 0
+  for (var i = 0; i < orders.length; i++) {
+   naniCalc += orders[i].amount
 }
 
+console.log('thins nanis calc', naniCalc);
 
-// var hatchbacks = cars.map(function(car){
-//   return car.type === 'hatchback'
-// })
-var iSedan = function(car){
-  return car.type === 'sedan'
-}
-// document.write('<br/>' + 'this are hatchbacks' + iSedan)
+var reduceNaniCalc = orders.reduce(function(start,order){
+  console.log('sum order', start, order)
+},0)
 
-var carsList = cars.map((car) => car.name)
-document.write('<br/>' + 'Map all cars with map function: <br/>' + carsList)
+var reducePeter = orders.reduce(function(y,x){
 
-var mapTypes = cars.map((types) => types.type)
-document.write('Types of cars with map function: <br/>' + mapTypes.join('<br/>'))
+  return y + x.amount
+},0)
 
-var typesOfCars = cars.map((x) => x.name)
+console.log('This is working as well', reducePeter);
 
-document.write('<br/> Types fo cars ES6' + typesOfCars)
-
-var namesCars = []
-for (var i = 0; i < cars.length; i++){
-  namesCars.push(cars[i].name)
+var kuboCalc = 0
+for (var i = 0; i < orders.length; i++) {
+  kuboCalc += orders[i].amount
 }
 
-document.write('<br/> Types of namesCars' + namesCars)
-var sport = cars.filter(iSedan)
+console.log(kuboCalc)
 
-var testMe = cars.map((x)=>x.type)
+var ama = 0
+for (var i = 0; i < orders.length; i++) {
+  ama += orders[i].amount
+}
 
-console.log('test me' + testMe);
+var reduceOrder = orders.reduce(function(sum,order){
+  return sum += order.amount
+},0)
 
-var listNames = cars.map((x) => x.name)
+console.log('reduce order', reduceOrder);
 
-console.log('List names' + listNames.join('<br/>'));
+var ta = 0
+for (var i = 0; i < orders.length; i++) {
+  ta += orders[i].amount + ama
+}
 
-var zeroOne = cars.map((y)=>y.type)
+console.log('this is tha', ta);
 
-console.log('This is 3 :' + zeroOne.join());
-document.write('This is zero One' + zeroOne.join('<br/>'))
 
+console.log('log', ama);
+
+var am = 0
+for(var i=0;i<orders.length;i++){
+  am +=orders[i].amount
+}
+
+var totalAm = 0
+for(var i = 0;i<orders.length;i++){
+  totalAm += orders[i].amount
+}
+
+document.write('this is total am', totalAm)
+
+console.log('this is amount',am);
+
+var calul = orders.reduce(function(x,y){
+  console.log(x,y);
+  return x + y.amount
+})
+document.write('<br/> calcul', calul)
+
+var normalRed = orders.reduce(function(count,order){
+  return count + order.amount
+})
+
+console.log('normal red', normalRed);
+var totek = orders.reduce((x,y) => x + y.amount,0)
+
+var neqReduce = orders.reduce((x,y) => x + y.amount,0)
+
+document.write('this is fat arrow', totek);
+
+// var loopMap = orders.map((x) => x.amount)
+//
+// // var ordersMap = orders.map((x) => document.write(x.amount + '<br/>'))
+// var filterOrder = orders.map((x) => document.write('<br/>' + 'Amount is: ' + '$' + x.amount))
+//
+// var totalAmount = 0
+// for (var i = 0; i < orders.length; i++){
+//   totalAmount += orders[i].amount
+// }
+//
+// var iSedan = function(car){
+//   return car.type === 'sedan'
+// }
+//
+// var carsList = cars.map((car) => car.name)
+// document.write('<br/>' + 'Map all cars with map function: <br/>' + carsList)
+//
+// var mapTypes = cars.map((types) => types.type)
+// document.write('Types of cars with map function: <br/>' + mapTypes.join('<br/>'))
+//
+// var typesOfCars = cars.map((x) => x.name)
+//
+// document.write('<br/> Types fo cars ES6' + typesOfCars)
+//
+// var namesCars = []
+// for (var i = 0; i < cars.length; i++){
+//   namesCars.push(cars[i].name)
+// }
+//
+// document.write('<br/> Types of namesCars' + namesCars)
+// var sport = cars.filter(iSedan)
+//
+// var testMe = cars.map((x)=>x.type)
+//
+// console.log('test me' + testMe);
+//
+// var listNames = cars.map((x) => x.name)
+//
+// console.log('List names' + listNames.join('<br/>'));
+//
+// var zeroOne = cars.map((y)=>y.type)
+//
+// console.log('This is 3 :' + zeroOne.join());
+// document.write('This is zero One' + zeroOne.join('<br/>'))
+//
 // function store (skates, coffee){
 //   var skateStrings = String(skates)
 //     while(skateStrings.length < 3)
@@ -164,7 +249,7 @@ document.write('This is zero One' + zeroOne.join('<br/>'))
 //     document.write(coffeeStrings + "coffee")
 // }
 // store(4,1)
-
+//
 // function labelPrint(number,label) {
 //   var numberString = String(number)
 //   while (numberString.lenght < 3)
@@ -173,7 +258,7 @@ document.write('This is zero One' + zeroOne.join('<br/>'))
 // }
 //
 // document.write(labelPrint(3,5))
-
+//
 // function noOne(a){
 //   return document.write(44)
 // }
@@ -188,7 +273,7 @@ document.write('This is zero One' + zeroOne.join('<br/>'))
 // }
 //
 // pushes("hello")
-
+//
 // var arra = []
 //
 // arra.push("no1","no2","no3","no4")
@@ -204,7 +289,7 @@ document.write('This is zero One' + zeroOne.join('<br/>'))
 // console.log('push new stuff', arra.push("new shit"));
 //
 // document.write("<br/>",arra);
-
+//
 // var person = {
 //   name: "peter",
 //   surname: "kona",
@@ -214,11 +299,11 @@ document.write('This is zero One' + zeroOne.join('<br/>'))
 //        'mustang',
 //        'skoda']
 // }
-
+//
 // function vlogLog(){
 // console.log(person.peter + ' ' + person.car[0]);
 // }
-
+//
 // function getName(){
 //   document.write(person.name + " " + person.surname)
 // }
@@ -237,7 +322,7 @@ document.write('This is zero One' + zeroOne.join('<br/>'))
 //
 // document.write(" ", anObject.right)
 // console.log(anObject);
-
+//
 // var book = []
 //
 // function addEntry(events,days){
@@ -333,22 +418,21 @@ document.write('This is zero One' + zeroOne.join('<br/>'))
 //     sum += number
 //   })
 //   document.write('<br/>' + sum);
-
-// const person = {
+//
+// const persons = {
 //   makeSound: function(){
 //     console.log(this.sound);
 //   }
 // }
 //
-//
 // const mark = Object.create(person)
-// mark.sound = "hello"
-// mark.makeSound()
+//   mark.sound = "hello"
+//   mark.makeSound()
 //
 // const waf = Object.create(person)
-// waf.sound = "hello2"
-// mark.makeSound()
-
+//   waf.sound = "hello2"
+//   mark.makeSound()
+//
 // function foo(err, done) {
 //     if (err) {
 //         return done(err);
@@ -374,16 +458,16 @@ document.write('This is zero One' + zeroOne.join('<br/>'))
 //     }
 // }
 // var add2 = addx(2);
-// add2(3); // 5
-// add2(4); // 6
+//   add2(3); // 5
+//   add2(4); // 6
 //
 // var add3 = addx(3);
-// add3(3); // 6
-// add3(5); // 8
+//   add3(3); // 6
+//   add3(5); // 8
 //
 // // can be passed
 // function applyf(f, x, y) {
-//     return f(x, y);
+//   return f(x, y);
 // }
 // applyf(function(a, b) { return a + b; }, 2, 2); // 4
 // function finder(records,clbk){
@@ -412,7 +496,7 @@ document.write('This is zero One' + zeroOne.join('<br/>'))
 // }
 //
 // finder([1, 2], onFinderDone);
-
+//
 // var skoda = cars.map(function(car){
 //   if (car.type === 'sedan')
 //     document.write( 'sedan')
