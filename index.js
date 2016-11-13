@@ -4,32 +4,90 @@ var cars = [
   {name:'skoda', type:'sedan'},
   {name:'chevrolet', type:'sedan'},
   {name:'chevrolet', type:'sedan'},
+  {name:'chevrolet', type:'shit'},
   {name:'toyota', type:'4x4'}
 ]
 
-const sedan = []
-for(var i=0;i<cars.length;i++)
-  if(cars[i].type === 'sedan')
-  sedan.push(cars[i])
+var filterType = cars.filter(function(hatch){
+  return hatch.type === 'hatchback'
+})
+var redType = cars.reduce(function(hatch){
+  return hatch.type === 'hatchback'
+})
 
-  console.log('find sedan', sedan[0], sedan[1]);
-
-  const sports = []
-  for(var i=0;i<cars.length;i++)
-    if(cars[i].type === 'sport')
-    sports.push(cars[i])
-
-    console.log('this are sports cars', sports);
+console.log('this is type reduce', redType);
 
 
+console.log('this is a filter', filterType);
 
+var find = cars.find(function(x){
+  return x.type === 'shit'
+})
 
-var skodaName = []
-for (var i = 0; i < cars.length; i++)
-  if(cars[i].name === 'skoda')
-  skodaName.push(cars[i])
+console.log('find', find);
+// var skoda = []
+//   for(var kubo =0; kubo<cars.length;kubo++)
+//     if(cars[kubo].name === 'skoda')
+//     skoda.push(cars[kubo])
+// console.log('this is skoda', skoda);
 
-   console.log('this is skoda name', skodaName[0]);
+// var sedan = []
+//   for (var i = 0;i<cars.length;i++)
+//     if(cars[i].type === 'sedan')
+//     sedan.push(cars[i])
+//
+// console.log('this is sedan', sedan);
+//
+// var filterSedan = cars.filter(function(x){
+//   return x.type === 'sedan'
+// })
+//
+//   console.log('this is sedan filter', filterSedan);
+// const sedan = []
+//   for(var i=0;i<cars.length;i++)
+//     if(cars[i].type === 'sedan')
+//     sedan.push(cars[i])
+//
+//   console.log('find sedan', sedan[0], sedan[1]);
+//
+//   var anotherFilter = cars.filter(function(x){
+//     return x.type === 'sport'
+//   })
+//
+// var newDog = function(x){
+//   return x.name === 'toyota'
+// }
+//
+// var dogs = cars.filter(newDog)
+//
+// console.log('this is dog', dogs);
+//
+// console.log('this are other cars exept toyota', otherCars);
+//
+//   console.log('new filter', anotherFilter)
+//
+//   var sports = []
+//   for(var i=0;i<cars.length;i++)
+//     if(cars[i].type === 'sport')
+//     sports.push(cars[i])
+//
+//     console.log('this are sports cars', sports);
+//
+//     var filterSedan = cars.filter(function(x){
+//       return x.type ==='sedan'
+//     })
+//
+//     console.log('filter sedan', filterSedan[0]);
+//
+//
+//
+//
+// var skodaName = []
+// for (var i = 0; i < cars.length; i++)
+//   if(cars[i].name === 'skoda')
+//   skodaName.push(cars[i])
+//
+//    console.log('this is skoda name', skodaName[0]);
 
 var orders = [
   {amount: 200},
