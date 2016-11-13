@@ -7,6 +7,30 @@ var cars = [
   {name:'toyota', type:'4x4'}
 ]
 
+const sedan = []
+for(var i=0;i<cars.length;i++)
+  if(cars[i].type === 'sedan')
+  sedan.push(cars[i])
+
+  console.log('find sedan', sedan[0], sedan[1]);
+
+  const sports = []
+  for(var i=0;i<cars.length;i++)
+    if(cars[i].type === 'sport')
+    sports.push(cars[i])
+
+    console.log('this are sports cars', sports);
+
+
+
+
+var skodaName = []
+for (var i = 0; i < cars.length; i++)
+  if(cars[i].name === 'skoda')
+  skodaName.push(cars[i])
+
+   console.log('this is skoda name', skodaName[0]);
+
 var orders = [
   {amount: 200},
   {amount: 200},
@@ -19,10 +43,12 @@ var orders = [
   {amount: 4300},
 ]
 
+var loopMap = orders.map((x) => x.amount)
+
 // var ordersMap = orders.map((x) => document.write(x.amount + '<br/>'))
 var filterOrder = orders.map((x) => document.write('<br/>' + 'Amount is: ' + '$' + x.amount))
 
-var totalAmount = orders.reduce(sum, order) => document.write('<br/>'+ 'investigated' +sum + order.amount, 0))
+var totalAmount = orders.reduce((sum, order) => document.write('<br/>'+ 'investigated' +sum + order.amount, 0))
 
 var totalAmount = 0
 for (var i = 0; i < orders.length; i++){
