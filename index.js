@@ -12,6 +12,21 @@ function maxWord(str) {
 
 console.log(maxWord('Improve your brain health and performance', 'Build your Personalized Training Program'))
 
+var randomString = 'Improve your brain health and performance'
+
+console.log(randomString);
+
+var bgstWrd = randomString.split(' ')
+
+var filterWords = bgstWrd.map(function(a){
+  return a.length
+})
+// var filterType = cars.filter(function(hatch){
+//   return hatch.type === 'hatchback'
+// })
+console.log(bgstWrd);
+console.log('filter', filterWords);
+
 // var cars = [
 //   {name: 'skoda', type:'hatchback'},
 //   {name:'toyota', type:'sport'},
