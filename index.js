@@ -30,7 +30,7 @@ console.log('this is foobar <br/>', foobar);
 
 console.log('this is bar <br/>', bar);;
 
-var randomString = 'Improve your brain health performanceperformance and performance'
+var randomString = 'Improve your brain health and performance'
 
 console.log(randomString);
 
@@ -60,29 +60,6 @@ function arrayMax(array) {
 }
 
 console.log('Array max please <br/>', arrayMax);
-
-function arrM() {
-
-}
-var largest= 0;
- for (i=0; i<=empty;i++){
-    if (empty[i]>largest) {
-        var largest=empty[i];
-    }
-}
-
-Array.max = function( array ){
-    return Math.max.apply( Math, array );
-};
-Array.min = function( array ){
-    return Math.min.apply( Math, array );
-};
-console.log('this is largest <br/>', largest);
-empty.max = function( array ){
-    return Math.max.apply( Math, array );
-};
-
-console.log('this is empty <br/>', empty);
 
 // var filterType = cars.filter(function(hatch){
 //   return hatch.type === 'hatchback'
