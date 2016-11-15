@@ -1,3 +1,74 @@
+
+var newWord = 'This is four amazing shit nananananan'
+var strWord = newWord.split(' ')
+
+var array = strWord.map(function(a){
+  return a.length
+})
+
+var nani= Math.max.apply(Math, array)
+
+document.write('Find max',nani, '<br/>')
+
+var revertNumber = nani.toString()
+
+console.log('revert number', revertNumber);
+
+var reduceArray = strWord.reduce(function(count,x) {
+  return count += x.length
+},0)
+
+var s = ['4d44']
+function reverse(s) {
+  return s.reverse().join('');
+}
+
+console.log(reverse(s));
+
+console.log(reverse(array));
+
+console.log('sum of all numbers <br/>', reduceArray);
+
+document.write('this is array: ', array)
+
+
+console.log('this is string', strWord);
+console.log('new array', array);
+
+var x = new Array(10)
+for (var i = 0; i < 10; i++) {
+  x[i] = new Array(5)
+}
+
+x[5][12] = 3.0;
+
+console.log(x);
+
+function dArray(rows) {
+  var arr = ['x']
+  for (var i = 0; i < rows; i++) {
+    arr[i] = []
+  }
+  return arr
+}
+
+function array2d(rows){
+  var arra = []
+  for(var i = 0;i <rows; i++){
+    arra[i] = []
+}
+return arra
+}
+
+console.log(dArray(3));
+console.log(array2d(6));
+document.write(array2d(5));
+
+var ab = []
+while(ab.push([])<10)
+
+console.log(ab);
+
 // function maxWord(str) {
 //   var word = str.split(' ')
 //   var biggestWord = ''
@@ -12,65 +83,65 @@
 
 // console.log(maxWord('Improve your brain health and performance',
 // 'Build your Personalized Training Program'))
-const foo = ['d','e']
-const bar = ['a','b','c', ...foo,'f','g','h']
-const foobar = [...bar,'i','j','k','l']
-
-const numbers = ['2','3','5','5','2','22']
-
-var maxArray = Math.max.apply(Math, numbers)
-
-document.write('Biggest numbers <br/>', maxArray)
-console.log('Biggest numbers <br/>', maxArray);
-
-console.log('numbers <br/>', numbers);
-
-
-console.log('this is foobar <br/>', foobar);
-
-console.log('this is bar <br/>', bar);;
-
-var randomString = 'Improve your brain health and performance'
-
-console.log(randomString);
-
-var bgstWrd = randomString.split(' ')
-
-var filterWords = bgstWrd.map(function(a){
-  return a.length
-})
-
-var reduceWords = bgstWrd.map(function(a){
-  return a.length
-})
-
-var empty = []
-var pushFilter = empty.push(filterWords)
-var maxArray = Math.max.apply(Math, empty)
-console.log(Math.max(bgstWrd))
-
-console.log(empty);
-
-var minReduce = Math.min(reduceWords)
-console.log('reduce my words this is it <br/>', reduceWords)
-console.log('reduce my words <br/>', minReduce)
-
-function arrayMax(array) {
-  return reduceWords.reduce((a, b) => Math.max(a, b));
-}
-
-console.log('Array max please <br/>', arrayMax);
-
-// var filterType = cars.filter(function(hatch){
-//   return hatch.type === 'hatchback'
+// const foo = ['d','e']
+// const bar = ['a','b','c', ...foo,'f','g','h']
+// const foobar = [...bar,'i','j','k','l']
+//
+// const numbers = ['2','3','5','5','2','22']
+//
+// var maxArray = Math.max.apply(Math, numbers)
+//
+// document.write('Biggest numbers <br/>', maxArray)
+// console.log('Biggest numbers <br/>', maxArray);
+//
+// console.log('numbers <br/>', numbers);
+//
+//
+// console.log('this is foobar <br/>', foobar);
+//
+// console.log('this is bar <br/>', bar);;
+//
+// var randomString = 'Improve your brain health and performance'
+//
+// console.log(randomString);
+//
+// var bgstWrd = randomString.split(' ')
+//
+// var filterWords = bgstWrd.map(function(a){
+//   return a.length
 // })
-
-console.log(bgstWrd);
-console.log('filter <br/>', filterWords);
-
-var maxArray = Math.max.apply(Math, filterWords)
-console.log('<br/> This is real shit ', maxArray);
-document.write('<br/> This is max number: ', maxArray)
+//
+// var reduceWords = bgstWrd.map(function(a){
+//   return a.length
+// })
+//
+// var empty = []
+// var pushFilter = empty.push(filterWords)
+// var maxArray = Math.max.apply(Math, empty)
+// console.log(Math.max(bgstWrd))
+//
+// console.log(empty);
+//
+// var minReduce = Math.min(reduceWords)
+// console.log('reduce my words this is it <br/>', reduceWords)
+// console.log('reduce my words <br/>', minReduce)
+//
+// function arrayMax(array) {
+//   return reduceWords.reduce((a, b) => Math.max(a, b));
+// }
+//
+// console.log('Array max please <br/>', arrayMax);
+//
+// // var filterType = cars.filter(function(hatch){
+// //   return hatch.type === 'hatchback'
+// // })
+//
+// console.log(bgstWrd);
+// console.log('filter <br/>', filterWords);
+//
+// var maxArray = Math.max.apply(Math, filterWords)
+// console.log('<br/> This is real shit ', maxArray);
+// document.write('<br/> This is max number: ', maxArray)
 
 // var cars = [
 //   {name: 'skoda', type:'hatchback'},
