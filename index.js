@@ -1,18 +1,36 @@
-function maxWord(str) {
-  var word = str.split(' ')
-  var biggestWord = ''
-  for (var i = 0; i < word.length; i++) {
-  if(biggestWord.length < word[i].length) {
-    biggestWord = word[i]
-  }
-  }
-  str = biggestWord
-  return str.length
-}
+// function maxWord(str) {
+//   var word = str.split(' ')
+//   var biggestWord = ''
+//   for (var i = 0; i < word.length; i++) {
+//   if(biggestWord.length < word[i].length) {
+//     biggestWord = word[i]
+//   }
+//   }
+//   str = biggestWord
+//   return str.length
+// }
 
-console.log(maxWord('Improve your brain health and performance', 'Build your Personalized Training Program'))
+// console.log(maxWord('Improve your brain health and performance',
+// 'Build your Personalized Training Program'))
+const foo = ['d','e']
+const bar = ['a','b','c', ...foo,'f','g','h']
+const foobar = [...bar,'i','j','k','l']
 
-var randomString = 'Improve your brain health and performance'
+const numbers = ['2','3','5','5','2','22']
+
+var maxArray = Math.max.apply(Math, numbers)
+
+document.write('Biggest numbers <br/>', maxArray)
+console.log('Biggest numbers <br/>', maxArray);
+
+console.log('numbers <br/>', numbers);
+
+
+console.log('this is foobar <br/>', foobar);
+
+console.log('this is bar <br/>', bar);;
+
+var randomString = 'Improve your brain health performanceperformance and performance'
 
 console.log(randomString);
 
@@ -21,11 +39,61 @@ var bgstWrd = randomString.split(' ')
 var filterWords = bgstWrd.map(function(a){
   return a.length
 })
+
+var reduceWords = bgstWrd.map(function(a){
+  return a.length
+})
+
+var empty = []
+var pushFilter = empty.push(filterWords)
+var maxArray = Math.max.apply(Math, empty)
+console.log(Math.max(bgstWrd))
+
+console.log(empty);
+
+var minReduce = Math.min(reduceWords)
+console.log('reduce my words this is it <br/>', reduceWords)
+console.log('reduce my words <br/>', minReduce)
+
+function arrayMax(array) {
+  return reduceWords.reduce((a, b) => Math.max(a, b));
+}
+
+console.log('Array max please <br/>', arrayMax);
+
+function arrM() {
+
+}
+var largest= 0;
+ for (i=0; i<=empty;i++){
+    if (empty[i]>largest) {
+        var largest=empty[i];
+    }
+}
+
+Array.max = function( array ){
+    return Math.max.apply( Math, array );
+};
+Array.min = function( array ){
+    return Math.min.apply( Math, array );
+};
+console.log('this is largest <br/>', largest);
+empty.max = function( array ){
+    return Math.max.apply( Math, array );
+};
+
+console.log('this is empty <br/>', empty);
+
 // var filterType = cars.filter(function(hatch){
 //   return hatch.type === 'hatchback'
 // })
+
 console.log(bgstWrd);
-console.log('filter', filterWords);
+console.log('filter <br/>', filterWords);
+
+var maxArray = Math.max.apply(Math, filterWords)
+console.log('<br/> This is real shit ', maxArray);
+document.write('<br/> This is max number: ', maxArray)
 
 // var cars = [
 //   {name: 'skoda', type:'hatchback'},
