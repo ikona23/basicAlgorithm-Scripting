@@ -1,67 +1,82 @@
-var cars = [
-  {name: 'skoda', type:'hatchback'},
-  {name:'toyota', type:'sport'},
-  {name:'skoda', type:'sedan'},
-  {name:'chevrolet', type:'sedan'},
-  {name:'chevrolet', type:'sedan'},
-  {name:'chevrolet', type:'shit'},
-  {name:'toyota', type:'4x4'}
-]
+function maxWord(str) {
+  var word = str.split(' ')
+  var biggestWord = ''
+  for (var i = 0; i < word.length; i++) {
+  if(biggestWord.length < word[i].length) {
+    biggestWord = word[i]
+  }
+  }
+  str = biggestWord
+  return str.length
+}
 
-var orders = [
-  {amount: 200},
-  {amount: 200},
-  {amount: 440},
-  {amount: 6640},
-  {amount: 3220},
-  {amount: 300},
-  {amount: 5400},
-  {amount: 5500},
-  {amount: 6640},
-  {amount: 3220},
-  {amount: 300},
-  {amount: 5400},
-  {amount: 5500},
-  {amount: 6640},
-  {amount: 3220},
-  {amount: 300},
-  {amount: 5400},
-  {amount: 5500},
-  {amount: 6640},
-  {amount: 5400},
-  {amount: 5500},
-  {amount: 6640},
-  {amount: 3220},
-  {amount: 300},
-  {amount: 5400},
-  {amount: 5500}
-]
+console.log(maxWord('Improve your brain health and performance', 'Build your Personalized Training Program'))
 
-
-var filterMe = orders.filter(function(x){
-  return x.orders
-})
-document.write(filterMe);
-
-
-
-var filterType = cars.filter(function(hatch){
-  return hatch.type === 'hatchback'
-})
-var redType = cars.reduce(function(hatch){
-  return hatch.type === 'hatchback'
-})
-
-console.log('this is type reduce', redType);
+// var cars = [
+//   {name: 'skoda', type:'hatchback'},
+//   {name:'toyota', type:'sport'},
+//   {name:'skoda', type:'sedan'},
+//   {name:'chevrolet', type:'sedan'},
+//   {name:'chevrolet', type:'sedan'},
+//   {name:'chevrolet', type:'shit'},
+//   {name:'toyota', type:'4x4'}
+// ]
+//
+// var orders = [
+//   {amount: 200},
+//   {amount: 200},
+//   {amount: 440},
+//   {amount: 6640},
+//   {amount: 3220},
+//   {amount: 300},
+//   {amount: 5400},
+//   {amount: 5500},
+//   {amount: 6640},
+//   {amount: 3220},
+//   {amount: 300},
+//   {amount: 5400},
+//   {amount: 5500},
+//   {amount: 6640},
+//   {amount: 3220},
+//   {amount: 300},
+//   {amount: 5400},
+//   {amount: 5500},
+//   {amount: 6640},
+//   {amount: 5400},
+//   {amount: 5500},
+//   {amount: 6640},
+//   {amount: 3220},
+//   {amount: 300},
+//   {amount: 5400},
+//   {amount: 5500}
+// ]
 
 
-console.log('this is a filter', filterType);
-
-var find = cars.find(function(x){
-  return x.type === 'shit'
-})
-
-console.log('find', find);
+// var newOrd = orders.filter(function(sum,fil){
+//   return sum + fil.orders
+// })
+//
+// var filterMe = orders.filter(function(x){
+//   return x.orders
+// })
+// document.write(filterMe);
+//
+// var filterType = cars.filter(function(hatch){
+//   return hatch.type === 'hatchback'
+// })
+// var redType = cars.reduce(function(hatch){
+//   return hatch.type === 'hatchback'
+// })
+//
+// console.log('this is type reduce', redType);
+//
+// console.log('this is a filter', filterType);
+//
+// var find = cars.find(function(x){
+//   return x.type === 'shit'
+// })
+//
+// console.log('find', find);
 // var skoda = []
 //   for(var kubo =0; kubo<cars.length;kubo++)
 //     if(cars[kubo].name === 'skoda')
@@ -122,82 +137,82 @@ console.log('find', find);
 //
 //    console.log('this is skoda name', skodaName[0]);
 
-var naniCalc = 0
-  for (var i = 0; i < orders.length; i++) {
-   naniCalc += orders[i].amount
-}
-
-console.log('thins nanis calc', naniCalc);
-
-var reduceNaniCalc = orders.reduce(function(start,order){
-  console.log('sum order', start, order)
-},0)
-
-var reducePeter = orders.reduce(function(y,x){
-
-  return y + x.amount
-},0)
-
-console.log('This is working as well', reducePeter);
-
-var kuboCalc = 0
-for (var i = 0; i < orders.length; i++) {
-  kuboCalc += orders[i].amount
-}
-
-console.log(kuboCalc)
-
-var ama = 0
-for (var i = 0; i < orders.length; i++) {
-  ama += orders[i].amount
-}
-
-var reduceOrder = orders.reduce(function(sum,order){
-  return sum += order.amount
-},0)
-
-console.log('reduce order', reduceOrder);
-
-var ta = 0
-for (var i = 0; i < orders.length; i++) {
-  ta += orders[i].amount + ama
-}
-
-console.log('this is tha', ta);
-
-
-console.log('log', ama);
-
-var am = 0
-for(var i=0;i<orders.length;i++){
-  am +=orders[i].amount
-}
-
-var totalAm = 0
-for(var i = 0;i<orders.length;i++){
-  totalAm += orders[i].amount
-}
-
-document.write('this is total am', totalAm)
-
-console.log('this is amount',am);
-
-var calul = orders.reduce(function(x,y){
-  console.log(x,y);
-  return x + y.amount
-})
-document.write('<br/> calcul', calul)
-
-var normalRed = orders.reduce(function(count,order){
-  return count + order.amount
-})
-
-console.log('normal red', normalRed);
-var totek = orders.reduce((x,y) => x + y.amount,0)
-
-var neqReduce = orders.reduce((x,y) => x + y.amount,0)
-
-document.write('this is fat arrow', totek);
+// var naniCalc = 0
+//   for (var i = 0; i < orders.length; i++) {
+//    naniCalc += orders[i].amount
+// }
+//
+// console.log('thins nanis calc', naniCalc);
+//
+// var reduceNaniCalc = orders.reduce(function(start,order){
+//   console.log('sum order', start, order)
+// },0)
+//
+// var reducePeter = orders.reduce(function(y,x){
+//
+//   return y + x.amount
+// },0)
+//
+// console.log('This is working as well', reducePeter);
+//
+// var kuboCalc = 0
+// for (var i = 0; i < orders.length; i++) {
+//   kuboCalc += orders[i].amount
+// }
+//
+// console.log(kuboCalc)
+//
+// var ama = 0
+// for (var i = 0; i < orders.length; i++) {
+//   ama += orders[i].amount
+// }
+//
+// var reduceOrder = orders.reduce(function(sum,order){
+//   return sum += order.amount
+// },0)
+//
+// console.log('reduce order', reduceOrder);
+//
+// var ta = 0
+// for (var i = 0; i < orders.length; i++) {
+//   ta += orders[i].amount + ama
+// }
+//
+// console.log('this is tha', ta);
+//
+//
+// console.log('log', ama);
+//
+// var am = 0
+// for(var i=0;i<orders.length;i++){
+//   am +=orders[i].amount
+// }
+//
+// var totalAm = 0
+// for(var i = 0;i<orders.length;i++){
+//   totalAm += orders[i].amount
+// }
+//
+// document.write('this is total am', totalAm)
+//
+// console.log('this is amount',am);
+//
+// var calul = orders.reduce(function(x,y){
+//   console.log(x,y);
+//   return x + y.amount
+// })
+// document.write('<br/> calcul', calul)
+//
+// var normalRed = orders.reduce(function(count,order){
+//   return count + order.amount
+// })
+//
+// console.log('normal red', normalRed);
+// var totek = orders.reduce((x,y) => x + y.amount,0)
+//
+// var neqReduce = orders.reduce((x,y) => x + y.amount,0)
+//
+// document.write('this is fat arrow', totek);
 
 // var loopMap = orders.map((x) => x.amount)
 //
