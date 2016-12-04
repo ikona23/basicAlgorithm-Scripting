@@ -1,73 +1,92 @@
-
-var newWord = 'This is four amazing shit nananananan'
-var strWord = newWord.split(' ')
-
-var array = strWord.map(function(a){
-  return a.length
-})
-
-var nani= Math.max.apply(Math, array)
-
-document.write('Find max',nani, '<br/>')
-
-var revertNumber = nani.toString()
-
-console.log('revert number', revertNumber);
-
-var reduceArray = strWord.reduce(function(count,x) {
-  return count += x.length
-},0)
-
-var s = ['4d44']
-function reverse(s) {
-  return s.reverse().join('');
+function partial(digit, pos) {
+  var values = {
+    1: ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+    2: ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
+    3: ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
+    4: ["", "M", "MM", "MMM"]
+  };
+  return values[pos][digit];
 }
-
-console.log(reverse(s));
-
-console.log(reverse(array));
-
-console.log('sum of all numbers <br/>', reduceArray);
-
-document.write('this is array: ', array)
-
-
-console.log('this is string', strWord);
-console.log('new array', array);
-
-var x = new Array(10)
-for (var i = 0; i < 10; i++) {
-  x[i] = new Array(5)
-}
-
-x[5][12] = 3.0;
-
-console.log(x);
-
-function dArray(rows) {
-  var arr = ['x']
-  for (var i = 0; i < rows; i++) {
-    arr[i] = []
+function convertToRoman(num) {
+  var p = 1;
+  var d = num.toString().split("");
+  var parts = [];
+  while (d.length > 0) {
+    var d = ds.pop();
+    parts.unshift(partial(d, pos));
+    pos++;
   }
-  return arr
+ return parts.join("");
 }
-
-function array2d(rows){
-  var arra = []
-  for(var i = 0;i <rows; i++){
-    arra[i] = []
-}
-return arra
-}
-
-console.log(dArray(3));
-console.log(array2d(6));
-document.write(array2d(5));
-
-var ab = []
-while(ab.push([])<10)
-
-console.log(ab);
+// var newWord = 'This is four amazing shit nananananan'
+// var strWord = newWord.split(' ')
+//
+// var array = strWord.map(function(a){
+//   return a.length
+// })
+//
+// var nani= Math.max.apply(Math, array)
+//
+// document.write('Find max',nani, '<br/>')
+//
+// var revertNumber = nani.toString()
+//
+// console.log('revert number', revertNumber);
+//
+// var reduceArray = strWord.reduce(function(count,x) {
+//   return count += x.length
+// },0)
+//
+// var s = ['4d44']
+// function reverse(s) {
+//   return s.reverse().join('');
+// }
+//
+// console.log(reverse(s));
+//
+// console.log(reverse(array));
+//
+// console.log('sum of all numbers <br/>', reduceArray);
+//
+// document.write('this is array: ', array)
+//
+//
+// console.log('this is string', strWord);
+// console.log('new array', array);
+//
+// var x = new Array(10)
+// for (var i = 0; i < 10; i++) {
+//   x[i] = new Array(5)
+// }
+//
+// x[5][12] = 3.0;
+//
+// console.log(x);
+//
+// function dArray(rows) {
+//   var arr = ['x']
+//   for (var i = 0; i < rows; i++) {
+//     arr[i] = []
+//   }
+//   return arr
+// }
+//
+// function array2d(rows){
+//   var arra = []
+//   for(var i = 0;i <rows; i++){
+//     arra[i] = []
+// }
+// return arra
+// }
+//
+// console.log(dArray(3));
+// console.log(array2d(6));
+// document.write(array2d(5));
+//
+// var ab = []
+// while(ab.push([])<10)
+//
+// console.log(ab);
 
 // function maxWord(str) {
 //   var word = str.split(' ')
