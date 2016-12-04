@@ -1,23 +1,33 @@
-function partial(digit, pos) {
-  var values = {
-    1: ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
-    2: ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
-    3: ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
-    4: ["", "M", "MM", "MMM"]
-  };
-  return values[pos][digit];
+function where(coll, src) {
+  return coll.filter(function(obj) {
+    for (var key in source) {
+      if (!obj.hasOwnProperty(key) || obj[key] != src[key]) {
+        return false;
+      }
+    }
+    return true;
+  });
 }
-function convertToRoman(num) {
-  var p = 1;
-  var d = num.toString().split("");
-  var parts = [];
-  while (d.length > 0) {
-    var d = ds.pop();
-    parts.unshift(partial(d, pos));
-    pos++;
-  }
- return parts.join("");
-}
+// function partial(digit, pos) {
+//   var values = {
+//     1: ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+//     2: ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
+//     3: ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
+//     4: ["", "M", "MM", "MMM"]
+//   };
+//   return values[pos][digit];
+// }
+// function convertToRoman(num) {
+//   var p = 1;
+//   var d = num.toString().split("");
+//   var parts = [];
+//   while (d.length > 0) {
+//     var d = ds.pop();
+//     parts.unshift(partial(d, pos));
+//     pos++;
+//   }
+//  return parts.join("");
+// }
 // var newWord = 'This is four amazing shit nananananan'
 // var strWord = newWord.split(' ')
 //
