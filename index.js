@@ -1,13 +1,37 @@
-function where(coll, src) {
-  return coll.filter(function(obj) {
-    for (var key in source) {
-      if (!obj.hasOwnProperty(key) || obj[key] != src[key]) {
-        return false;
-      }
-    }
-    return true;
-  });
+function slasher(arr, howMany) {
+  arr.splice(0,howMany)
+
+  return arr
+
 }
+
+console.log(slasher([1, 2, 3], 2))
+
+// var family = ['Nani', 'Peter', 'Kubo']
+//
+// console.log('this is a family before a push: ', family);
+//
+// family.push('Cloud')
+//
+// console.log('this is a family: ', family);
+//
+// family.unshift('Peterer')
+//
+// console.log('this is unshift: ', family);
+//
+// document.write(family)
+
+
+// function where(coll, src) {
+//   return coll.filter(function(obj) {
+//     for (var key in source) {
+//       if (!obj.hasOwnProperty(key) || obj[key] != src[key]) {
+//         return false;
+//       }
+//     }
+//     return true;
+//   });
+// }
 // function partial(digit, pos) {
 //   var values = {
 //     1: ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
