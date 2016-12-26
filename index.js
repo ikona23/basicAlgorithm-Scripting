@@ -1,12 +1,34 @@
-function slasher(arr, howMany) {
-  arr.splice(0,howMany)
-
-  return arr
-
+function mutation(err) {
+  var word1 = arr[0].toLowerCase()
+  arr[1].toLowerCase()
+  for (var i = 0; i < word2.length; i++) {
+    var value = word1.indexOf(word2[i])
+      if(value===-1){
+        return false
+      }
+  }
+  return true
 }
 
-console.log(slasher([1, 2, 3], 2))
-
+mutation(['hello', 'hey'])
+// function slasher(arr, howMany) {
+//   arr.splice(0,howMany)
+//   return arr
+// }
+//
+// console.log(slasher([1, 2, 3], 2))
+// console.log(slasher([1, 2, 3], 1))
+// console.log(slasher([1, 2, 3], 0))
+//
+// function mutation(arr) {
+//   var wordOne = arr[0].toLowerCase()
+//   var wordTwo = arr[1].toLowerCase()
+//
+//   for(var i=0; i<wordTwo.length; i++)
+// }
+//   return arr
+// }
+// document.write('arr', arr)
 // var family = ['Nani', 'Peter', 'Kubo']
 //
 // console.log('this is a family before a push: ', family);
