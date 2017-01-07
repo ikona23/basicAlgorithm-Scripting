@@ -1,16 +1,22 @@
-function mutation(err) {
-  var word1 = arr[0].toLowerCase()
-  arr[1].toLowerCase()
-  for (var i = 0; i < word2.length; i++) {
-    var value = word1.indexOf(word2[i])
-      if(value===-1){
-        return false
-      }
-  }
-  return true
-}
+$.getJSON("colors.json", function(data) {
+    console.log(data);
+    // data is a JavaScript object now. Handle it as such
 
-mutation(['hello', 'hey'])
+});
+
+// function mutation(err) {
+//   var word1 = arr[0].toLowerCase()
+//   arr[1].toLowerCase()
+//   for (var i = 0; i < word2.length; i++) {
+//     var value = word1.indexOf(word2[i])
+//       if(value===-1){
+//         return false
+//       }
+//   }
+//   return true
+// }
+//
+// mutation(['hello', 'hey'])
 // function slasher(arr, howMany) {
 //   arr.splice(0,howMany)
 //   return arr
