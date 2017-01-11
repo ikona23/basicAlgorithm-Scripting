@@ -1,8 +1,23 @@
-$.getJSON("colors.json", function(data) {
-    console.log(data);
-    // data is a JavaScript object now. Handle it as such
+function step1() {
+  step2()
+}
+function step2() {
+  step3()
+}
+function step3() {
+  step4()
+}
+function step4() {
+  debugger;
+}
 
-});
+step1()
+
+// $.getJSON("colors.json", function(data) {
+//     console.log(data);
+//     // data is a JavaScript object now. Handle it as such
+//
+// });
 
 // function mutation(err) {
 //   var word1 = arr[0].toLowerCase()
