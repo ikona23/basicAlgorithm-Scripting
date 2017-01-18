@@ -1,17 +1,32 @@
-function step1() {
-  step2()
-}
-function step2() {
-  step3()
-}
-function step3() {
-  step4()
-}
-function step4() {
-  debugger;
-}
-
-step1()
+let prmsone = new Promise ((resolve,reject ) => {
+  setTimeout(() => {
+    resolve ('hello')
+  },500)
+})
+let prmstwo = new Promise ((resolve,reject ) => {
+  setTimeout(() => {
+    resolve ('hello from two')
+  },500)
+})
+let prmsthreee = new Promise ((resolve,reject ) => {
+  setTimeout(() => {
+    resolve ('hello from three')
+  },500)
+})
+// function step1() {
+//   step2()
+// }
+// function step2() {
+//   step3()
+// }
+// function step3() {
+//   step4()
+// }
+// function step4() {
+//   debugger;
+// }
+//
+// step1()
 
 // $.getJSON("colors.json", function(data) {
 //     console.log(data);
