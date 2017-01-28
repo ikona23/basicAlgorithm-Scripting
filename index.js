@@ -6,13 +6,18 @@ let prmsone = new Promise ((resolve,reject ) => {
 let prmstwo = new Promise ((resolve,reject ) => {
   setTimeout(() => {
     resolve ('hello from two')
-  },500)
+  },1500)
 })
 let prmsthreee = new Promise ((resolve,reject ) => {
   setTimeout(() => {
     resolve ('hello from three')
-  },500)
+  },2500)
 })
+
+Promise.all([prmsone,prmstwo,prmsthreee])
+  .then(data => {
+    console.log(data)
+  })
 // function step1() {
 //   step2()
 // }
